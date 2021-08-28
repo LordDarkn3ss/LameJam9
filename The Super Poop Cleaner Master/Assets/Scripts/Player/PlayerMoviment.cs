@@ -5,7 +5,9 @@ using UnityEngine;
 public class PlayerMoviment : MonoBehaviour
 {
     [SerializeField]
-    float speed, jumpForce, checkGround;
+    Animator spin; //depois eu vejo isso
+    [SerializeField]
+    float speed, rotateSpeed, jumpForce, checkGround;
     [SerializeField]
     Transform groundDetect;
     [SerializeField]
@@ -24,9 +26,9 @@ public class PlayerMoviment : MonoBehaviour
     {
 
         Move();
-
+        Invert();
     }
-
+        
     void Move()
     {
         eixoH = Input.GetAxis("Horizontal");
@@ -36,11 +38,18 @@ public class PlayerMoviment : MonoBehaviour
         Debug.DrawRay(groundDetect.position, new Vector2(0, -checkGround), Color.red);
         if(Physics2D.Raycast(groundDetect.position, -groundDetect.up, checkGround, piso.value))
         {
-            print("tocando o chão");
+            if(!Input.GetKey(KeyCode.X) && !Input.GetKey(KeyCode.K))
             if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
             {
                 GetComponent<Rigidbody2D>().AddForce(new Vector2(0, jumpForce));
             }
         }
     }
+
+    void Invert()
+    {
+        if (eixoH > 0){ transform.eulerAngles = new Vector2(0, 180); /*spin.SetBool("Girar", true);*/ }
+        else if(eixoH < 0) { transform.eulerAngles = new Vector2(0, 0); /*spin.SetBool("Girar", true);*/ }
+    }
+
 }
