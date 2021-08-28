@@ -20,6 +20,7 @@ public class PoopLife : MonoBehaviour
             life.fillAmount -= 0.33f;
             if (life.fillAmount <= 0.03f)
             {
+                ShitBarBehaviourScript.Cleaner();
                 Destroy(this.gameObject);
             }
         }
