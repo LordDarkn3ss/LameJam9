@@ -7,6 +7,8 @@ public class PoopLife : MonoBehaviour
 {
     [SerializeField]
     Image life;
+    [SerializeField]
+    ParticleSystem poopExplosion;
     
     void Awake()
     {
@@ -23,6 +25,13 @@ public class PoopLife : MonoBehaviour
                 ShitBarBehaviourScript.Cleaner();
                 Destroy(this.gameObject);
             }
+        }
+        if (other.gameObject.tag == "Master")
+        {
+            Instantiate(poopExplosion, transform.position, Quaternion.identity);
+                ShitBarBehaviourScript.Shited();
+                Destroy(this.gameObject,0.1f);
+            
         }
     }
 

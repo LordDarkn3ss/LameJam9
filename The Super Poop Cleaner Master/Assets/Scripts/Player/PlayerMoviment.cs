@@ -30,10 +30,13 @@ public class PlayerMoviment : MonoBehaviour
 
     void Update()
     {
-
-        Move();
-        Limited();
-        Invert();
+        if (!ShitBarBehaviourScript.die) 
+        {
+            Move();
+            Limited();
+            Invert();
+        }
+        Die();
     
         
             
@@ -82,5 +85,12 @@ public class PlayerMoviment : MonoBehaviour
             transform.position = new Vector2(limiteMenor.position.x, transform.position.y);
         }
     }
-
+    void Die()
+    {
+        if (ShitBarBehaviourScript.die)
+        {
+            print("morrer");
+            spin.SetBool("Die", true);
+        }
+    }
 }

@@ -9,13 +9,19 @@ public class ShitBarBehaviourScript : MonoBehaviour
     [SerializeField]
     float cleanerNumStart,shitedNumStart;
 
+    public static bool die;
+
     [SerializeField]
     Image shitBar;
     void Start() 
     {
+
+        StartCoroutine(ConstantPoopBar());
+
+
         shitedNum = shitedNumStart;
         cleanerNum = cleanerNumStart;
-        shitBarNum = 30;
+        shitBarNum = 0;
     }
 
     // Update is called once per frame
@@ -23,6 +29,7 @@ public class ShitBarBehaviourScript : MonoBehaviour
     {
         shitBar.fillAmount = shitBarNum/100;
         if (shitBarNum < 0) { shitBarNum = 0; }
+        if (shitBar.fillAmount == 1) { die = true;}
     }
     public static void Shited()
     {
@@ -32,5 +39,19 @@ public class ShitBarBehaviourScript : MonoBehaviour
     public static void Cleaner()
     {
         shitBarNum -= cleanerNum;
+    }
+
+
+
+    IEnumerator ConstantPoopBar()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(1f);
+            shitBarNum += 0.5f;
+        }
+            
+       
+        
     }
 }
