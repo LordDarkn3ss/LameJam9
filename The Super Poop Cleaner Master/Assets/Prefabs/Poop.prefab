@@ -240,7 +240,7 @@ MonoBehaviour:
   powerUp: {fileID: 247492311233011760, guid: f8774fd127d3c3f448759ee441650e58, type: 3}
   life: {fileID: 107615477230728537}
   poopExplosion: {fileID: 6344469754808898140, guid: 811bd675fa37e5c4f9fae997b469bb59, type: 3}
-  chanceSpawn: 10
+  chanceSpawn: 25
 --- !u!114 &-383518899685371315
 MonoBehaviour:
   m_ObjectHideFlags: 0

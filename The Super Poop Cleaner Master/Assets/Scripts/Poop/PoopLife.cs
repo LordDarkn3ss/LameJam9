@@ -43,6 +43,7 @@ public class PoopLife : MonoBehaviour
         }
         if (other.gameObject.tag == "Limpeza")
         {
+            ShitBarBehaviourScript.shitBarNum -= 0.4f;
             InterfaceInGame.score += 5;
             life.fillAmount -= 0.10f;
             if (life.fillAmount <= 0.03f)
