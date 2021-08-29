@@ -9,6 +9,8 @@ public class ShitBarBehaviourScript : MonoBehaviour
     [SerializeField]
     float cleanerNumStart,shitedNumStart;
 
+   
+
     public static bool die;
 
     [SerializeField]
@@ -16,7 +18,7 @@ public class ShitBarBehaviourScript : MonoBehaviour
     void Start() 
     {
         die = false;
-        StartCoroutine(ConstantPoopBar());
+        StartCoroutine(ConstantPoopBar(1f));
 
 
         shitedNum = shitedNumStart;
@@ -44,12 +46,18 @@ public class ShitBarBehaviourScript : MonoBehaviour
 
 
 
-    IEnumerator ConstantPoopBar()
+    IEnumerator ConstantPoopBar(float a)
     {
         while (true)
         {
-            yield return new WaitForSeconds(1f);
-            shitBarNum += 0.5f;
+            for (int i = 0; i < 4; i++)
+            {
+                yield return new WaitForSeconds(a);
+                shitBarNum += 0.5f;
+            }
+            if (a > 0.2f) { a -= 0.01f; }
+            
+            
         }
             
        

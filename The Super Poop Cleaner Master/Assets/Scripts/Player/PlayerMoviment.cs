@@ -89,7 +89,7 @@ public class PlayerMoviment : MonoBehaviour
     {
         if (ShitBarBehaviourScript.die)
         {
-            print("morrer");
+           
             spin.SetBool("Die", true);
         }
     }

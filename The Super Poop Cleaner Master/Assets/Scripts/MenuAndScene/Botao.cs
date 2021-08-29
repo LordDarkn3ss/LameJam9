@@ -38,4 +38,8 @@ public class Botao : MonoBehaviour
     {
 
     }
+    public void endGame()
+    {
+        Application.Quit();
+    }
 }

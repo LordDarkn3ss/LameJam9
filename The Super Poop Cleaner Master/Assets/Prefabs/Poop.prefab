@@ -89,6 +89,7 @@ GameObject:
   - component: {fileID: 107615476037871438}
   - component: {fileID: 5654446798385222427}
   - component: {fileID: 892064459}
+  - component: {fileID: -383518899685371315}
   m_Layer: 0
   m_Name: Poop
   m_TagString: Untagged
@@ -236,8 +237,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b675fbcee8af764aa6d725e2dec1bf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  powerUp: {fileID: 247492311233011760, guid: f8774fd127d3c3f448759ee441650e58, type: 3}
   life: {fileID: 107615477230728537}
   poopExplosion: {fileID: 6344469754808898140, guid: 811bd675fa37e5c4f9fae997b469bb59, type: 3}
+  chanceSpawn: 10
+--- !u!114 &-383518899685371315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 107615476037871439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664450f777d41ae4091a538b4dda452b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tag: PU
 --- !u!1 &107615477230728543
 GameObject:
   m_ObjectHideFlags: 0
@@ -372,7 +388,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 6
   m_TargetDisplay: 0
 --- !u!114 &107615477783947895
 MonoBehaviour:

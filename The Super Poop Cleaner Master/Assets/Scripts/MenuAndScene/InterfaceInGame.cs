@@ -1,23 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class InterfaceInGame : MonoBehaviour
 {
     public static bool paused = false;
-    
+    public static int score;
+    [SerializeField]
+    Text scoreTx;
+
     [SerializeField]
     Animator anim;
     void Awake()
     {
-        
+        score = 0;
         anim.SetBool("Die", false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        scoreTx.text = "Score: " +score.ToString(); //English
 
 
         if (ShitBarBehaviourScript.die)
