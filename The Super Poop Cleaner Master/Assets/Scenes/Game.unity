@@ -990,6 +990,7 @@ GameObject:
   - component: {fileID: 461433802}
   - component: {fileID: 461433801}
   - component: {fileID: 461433800}
+  - component: {fileID: 461433803}
   m_Layer: 5
   m_Name: Menu
   m_TagString: Untagged
@@ -1060,7 +1061,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 461433801}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 461433803}
+        m_TargetAssemblyTypeName: Botao, Assembly-CSharp
+        m_MethodName: StartGameScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Menu
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &461433801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1099,6 +1112,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 461433798}
   m_CullTransparentMesh: 1
+--- !u!114 &461433803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 461433798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82ea402e90b79754eb0219d7fc186989, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &524112529
 GameObject:
   m_ObjectHideFlags: 0
@@ -3474,6 +3499,7 @@ GameObject:
   - component: {fileID: 1195158272}
   - component: {fileID: 1195158271}
   - component: {fileID: 1195158270}
+  - component: {fileID: 1195158273}
   m_Layer: 5
   m_Name: Menu
   m_TagString: Untagged
@@ -3544,7 +3570,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1195158271}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1195158273}
+        m_TargetAssemblyTypeName: Botao, Assembly-CSharp
+        m_MethodName: StartGameScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Menu
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1195158271
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3583,6 +3621,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1195158268}
   m_CullTransparentMesh: 1
+--- !u!114 &1195158273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1195158268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82ea402e90b79754eb0219d7fc186989, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1197857240
 GameObject:
   m_ObjectHideFlags: 0
@@ -3869,8 +3919,9 @@ GameObject:
   - component: {fileID: 1400244296}
   - component: {fileID: 1400244295}
   - component: {fileID: 1400244294}
+  - component: {fileID: 1400244297}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Play Again
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3939,7 +3990,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1400244295}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1400244297}
+        m_TargetAssemblyTypeName: Botao, Assembly-CSharp
+        m_MethodName: TryAgain
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Game
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1400244295
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3978,6 +4041,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1400244292}
   m_CullTransparentMesh: 1
+--- !u!114 &1400244297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400244292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82ea402e90b79754eb0219d7fc186989, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1412566062
 GameObject:
   m_ObjectHideFlags: 0

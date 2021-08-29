@@ -5,17 +5,22 @@ using UnityEngine;
 public class InterfaceInGame : MonoBehaviour
 {
     public static bool paused = false;
+    
     [SerializeField]
     Animator anim;
-    void Start()
+    void Awake()
     {
         
+        anim.SetBool("Die", false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(ShitBarBehaviourScript.die)
+        
+
+
+        if (ShitBarBehaviourScript.die)
         {
             anim.SetBool("Die", true);
         }
@@ -41,4 +46,6 @@ public class InterfaceInGame : MonoBehaviour
             
         }
     }
+
+   
 }

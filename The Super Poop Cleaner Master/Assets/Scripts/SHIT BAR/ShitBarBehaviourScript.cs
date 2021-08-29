@@ -15,7 +15,7 @@ public class ShitBarBehaviourScript : MonoBehaviour
     Image shitBar;
     void Start() 
     {
-
+        die = false;
         StartCoroutine(ConstantPoopBar());
 
 
@@ -27,6 +27,7 @@ public class ShitBarBehaviourScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         shitBar.fillAmount = shitBarNum/100;
         if (shitBarNum < 0) { shitBarNum = 0; }
         if (shitBar.fillAmount == 1) { die = true;}
